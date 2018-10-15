@@ -1,0 +1,48 @@
+- var add = []
+if absolute
+	- add = ['bar--absolute','bar--transparent']
+.nav-container
+	.bar.bar--sm.visible-xs
+		.container
+			.row
+				.col-3.col-md-2
+					a(href='/')
+						img.logo.logo-dark(alt='logo', src='img/custom/atgc-dark.png')
+						img.logo.logo-light(alt='logo', src='img/custom/atgc.png')
+				.col-9.col-md-10.text-right
+					a.hamburger-toggle(href='#', data-toggle-class='#menu1;hidden-xs')
+						i.icon.icon--sm.stack-interface.stack-menu
+	nav#menu1.bar.bar--sm.bar-1.hidden-xs(class=add)
+		.container
+			.row
+				.col-lg-1.col-md-2.hidden-xs
+					.bar__module
+						a(href='/')
+							img.logo.logo-dark(alt='logo', src='img/custom/atgc-dark.png')
+							img.logo.logo-light(alt='logo', src='img/custom/atgc.png')
+				.col-lg-11.col-md-12.text-right.text-left-xs.text-left-sm
+					.bar__module
+						ul.menu-horizontal.text-left
+							li
+								a(href='/') Home
+							li
+								a(href='/telemedicine') Telemedicine
+							li
+								a(href='/specialties') Specialties
+							li.dropdown.dropdown--hover
+								span.dropdown__trigger About
+								.dropdown__container
+									.container
+										.row
+											.dropdown__content.col-lg-2.col-md-4
+												ul.menu-vertical
+													li
+														a(href='/patients') Patients
+													li
+														a(href='/partners') Partners
+													li.separate
+														a(href='/news') News
+													li
+														a(href='/faq') FAQs
+													li
+														a(href='/contact-us') Contact Us

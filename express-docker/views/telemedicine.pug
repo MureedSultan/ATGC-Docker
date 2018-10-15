@@ -1,0 +1,95 @@
+extends layout/main
+
+block content
+    section.text-center
+        .container
+            .row
+                .col-md-10
+                    h1 Why Telemedicine is right for you
+                    p.lead
+                        | Our team of certified genetic counseling experts provides comprehensive, customizable services via telemedicine to patients and providers nationwide
+            // end of row
+            // end of container
+    section.text-center.bg--secondary
+        .container
+            .row
+                .col-md-8
+                    .tabs-container(data-content-align='left')
+                        ul.tabs
+                            li.active
+                                .tab__title.text-center
+                                    i.icon.icon--sm.block.icon-Unlock
+                                    span.h5 Increased Access
+                                .tab__content
+                                    p.lead
+                                        | Access to healthcare should not be dependent on where you live. We believe that telemedicine services are an essential tool for achieving health equality across the nation. We are passionate about providing a solution by connecting patients and providers to qualified genetics professionals.
+                            li
+                                .tab__title.text-center
+                                    i.icon.icon--sm.block.icon-Ribbon-2
+                                    span.h5 Consistent Quality
+                                .tab__content
+                                    p.lead
+                                        | Patients who complete a genetic counseling appointment with AT-GC report a more accurate perception of their risks and say that the experience exceeded their expectations. There is no difference in patient knowledge or satisfaction compared to in-person genetic counseling.
+                            li
+                                .tab__title.text-center
+                                    i.icon.icon--sm.block.icon-Clock-Back
+                                    span.h5 Time & Cost Savings
+                                .tab__content
+                                    p.lead
+                                        | Telemedicine provides ease of scheduling for patients who may otherwise lack the ability, time, or resources to meet with an in-person genetic counselor. The lower operating cost also translates into cost-savings for patients and providers.
+    section.text-center
+        .container
+            .row
+                .col-md-10.col-lg-8
+                    h1 Telemedicine Facts
+    section.imageblock.switchable.feature-large
+        .imageblock__content.col-lg-4.col-md-3.pos-right.d-none.d-md-block
+            .background-image-holder
+                img(alt='image', src='img/custom/road.jpg')
+        .container
+            .row
+                .col-lg-7.col-md-8
+                    .feature-large__group
+                        .row
+                            .col-6
+                                .feature.feature-6
+                                    h1.color--primary 20%
+                                    p
+                                        | Americans live in rural areas
+                            .col-6
+                                .feature.feature-6
+                                    h1.color--primary 29%
+                                    p
+                                        | Healthcare organizations have reported a cost savings of over 20%
+                            .col-6
+                                .feature.feature-6
+                                    h1.color--primary 31
+                                    p
+                                        | States require health insurance companies to cover telemedicine services
+                            .col-6(style='margin-top:0px !important')
+                                .feature.feature-6
+                                    h1.color--primary 7
+                                    p
+                                        | Million patients predicted to use telemedicine in 2018
+                    h2 Increased Rural Access to Genetic Counseling
+                    p.lead
+                        | Among the many challenges that rural areas must overcome to obtain health equality, availability of healthcare professionals and lack of adequate transportation can be resolved using telemedicine. According to the Rural Health Reform Policy Research Center’s 2014 Update of the Rural-Urban Chartbook most rural counties have only 30 specialists per 100,000 population, compared to 263 specialists per 100,000 in large metro areas.
+                    h2 Preparing for the future
+                    p.lead
+                        | In 2017 nearly 76% of healthcare executives reported that their organizations were currently offering or planning to provide telemedicine services. The demand for improved patient access and flexibility is further demonstrated by the 7 million patients which are predicted to utilize telemedicine service by 2018, up from less than 350,000 in 2013. The best part, most organizations have already begun seeing a cost savings or ROI from there telemedicine services. In fact, 29% of healthcare organizations have reported a cost savings of over 20%.
+    section.text-center
+        .container
+            .row
+                .col-md-8.col-lg-6
+                    .cta
+                        h2 Still got questions?
+                        p.lead
+                            | We're here to help
+                        a.btn.btn--primary.type--uppercase(href='faq')
+                            span.btn__text
+                                | Check out FAQs
+                        p.type--fine-print
+                            | or 
+                            a(href="contact-us")
+                                | contact us
+

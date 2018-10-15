@@ -1,0 +1,40 @@
+extends ../layout/main
+
+prepend nav
+    - var absolute = true
+
+append footer
+    script.
+        $('.article__body').find('ul').addClass('bullets');
+
+block content
+    - let options = {year: 'numeric',month: 'long',day: 'numeric'};
+    each post in posts
+        section.unpad
+            article
+                .imagebg.text-center.height-60(data-overlay='5')
+                    .background-image-holder
+                        img(alt='background', src=post.feature_image)
+                    .container.pos-vertical-center
+                        .row
+                            .col-md-12
+                                .article__title
+                                    h1 #{post.title}
+                                    - let date = new Date(post.published_at).toLocaleDateString('en-us', options);
+                                    span #{date}
+                div
+                    .container
+                        .row.justify-content-center
+                            .col-md-10.col-lg-8
+                                .article__body 
+                                    != post.html
+                                .article__share.text-center
+                                    a.btn.bg--facebook.btn--icon(href='#')
+                                        span.btn__text
+                                            i.socicon.socicon-facebook
+                                            |	Share on Facebook
+                                    a.btn.bg--twitter.btn--icon(href='#')
+                                        span.btn__text
+                                            i.socicon.socicon-twitter
+                                            |	Share on Twitter
+

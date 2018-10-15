@@ -1,0 +1,131 @@
+extends layout/main
+
+prepend nav 
+    - var absolute = true
+
+append footer
+    //script(src='js/granim.min.js')
+
+block content
+    section.cover.space--lg.height-80.imagebg(data-scrim-bottom='10', data-scrim-top='5')
+        .background-image-holder
+            img(alt='background', src='img/custom/chair-blur.jpg')
+        .container
+            .row.justify-content-around
+                .col-md-10.col-lg-9.text-center
+                    .mt--3
+                        h1 Advanced Tele-Genetic Counseling
+                        p.lead
+                            | We provide access to genetic counseling and testing services across North America, via telemedicine. 
+                            | The world of genetic understanding is growing. Let’s navigate it together.
+                        a.btn.btn--primary.type--uppercase(href='#')
+                            span.btn__text
+                                | Request An Appointment
+    section.switchable.feature-large
+        .container
+            .row.justify-content-around
+                .col-md-6.hidden-xs
+                    img.border--round.box-shadow-wide(alt='Image', src='img/custom/outdoor-girl.jpg')
+                .col-md-6.col-lg-5
+                    .switchable__text
+                        h2 Why Telemedicine?
+                        p.lead
+                            | Along with saving time and money, telemedicine can increase patient access while guaranteeing rapid patient access to consistently high-quality, comprehensive genetics consultations from the AT-GC team of certified genetic counseling experts.
+                        a(href='telemedicine') Learn More »
+    section.text-center
+        .container
+            .row
+                .col-md-4
+                    .feature.feature-3.boxed.boxed--lg.boxed--border
+                        i.icon.icon--lg.icon-Globe
+                        h4 Anytime, Anywhere
+                        p
+                            | Access to quality healthcare services should not be dependent on where you live. We believe that telemedicine is an essential tool for achieving health equity across the nation. Using telephonic and secure video conferencing, we offer comprehensive genetic counseling services, no matter the location.
+                    // end feature
+                .col-md-4
+                    .feature.feature-3.boxed.boxed--lg.boxed--border
+                        i.icon.icon--lg.icon-Medical-Sign
+                        h4 Specialized Care
+                        p
+                            | From genetic oncology to whole exome sequencing, we have dedicated genetic counselors that can meet your needs. Whether you need comprehensive counseling, expert interpretation or prevention education, we can help you and your patients achieve an outstanding quality of care.
+                    // end feature
+                .col-md-4
+                    .feature.feature-3.boxed.boxed--lg.boxed--border
+                        i.icon.icon--lg.icon-MaleFemale
+                        h4 Who We Serve
+                        p
+                            | We partner with organizations who want to integrate cutting-edge genetics services into their service lines. Primary care providers, insurance companies, laboratories, individual patients and more can utilize any of our services. Work with our service navigators to customize your experience.
+    section.text-center
+        .container
+            .row
+                .col-md-10.col-lg-8
+                    h2 What to expect
+
+    section.imageblock.switchable.feature-large.space--sm
+        .imageblock__content.col-lg-6.col-md-4.pos-right
+            .background-image-holder
+                img(alt='image', src='img/custom/patient.jpg')
+        .container
+            .row
+                .col-lg-5.col-md-7
+                    h2 Patients
+                    p.lead
+                        | The caring and competent genetic counselors at AT-GC provide virtual patient care through an online and telephone-based platform, helping to bridge the gap and fill the gap in qualified genetics professionals for patients located in every state, with equal access to those in rural and metropolitan areas, alike.
+
+    section.imageblock.switchable.switchable--switch.feature-large.space--sm
+        .imageblock__content.col-lg-6.col-md-4.pos-right
+            .background-image-holder
+                img(alt='image', src='img/custom/handshake.jpg')
+        .container
+            .row
+                .col-lg-5.col-md-7
+                    h2 Partners
+                    p.lead
+                        | We specialize in all aspects of the genetic counseling process, including pre/post-test genetic counseling, genetic testing implementation, coordination, and interpretation of results. Providers can maintain control of patient care while broadening the scope of in-office services.
+    
+    section.text-center
+        .container
+            .row
+                .col-md-8
+                    .cta
+                        h2 Ready to improve your organization's patient satisfaction?
+                        p.lead
+                            | We'll be there every step of the way!
+                        a.btn.btn--primary.type--uppercase(href='contact-us')
+                            span.btn__text
+                                | Contact Us
+                        p.type--fine-print
+                            | or check out 
+                            a(href="faq")
+                                | FAQs
+            // end of row
+            // end of container
+
+
+    section.imageblock.switchable.feature-large.bg--secondary
+        .imageblock__content.col-lg-4.col-md-3.pos-right
+            .background-image-holder
+                img(alt='image', src='img/custom/hands.jpg')
+        .container
+            .row
+                .col-lg-7.col-md-8
+                    h2 Complete Comprehensive Counseling
+                    p.lead
+                        | We partner with organizations that want to integrate cutting-edge genetics services into the care they provide to their patient population.
+                    p.lead
+                        | We provide comprehensive counseling across the genetics spectrum from genetics professionals who are expertly trained in their respective fields and specialties
+    section.text-center
+        .container
+            .row
+                .col-md-8.col-lg-6
+                    .cta
+                        h2 Still got questions?
+                        p.lead
+                            | We're here to help
+                        a.btn.btn--primary.type--uppercase(href='faq')
+                            span.btn__text
+                                | Check out FAQ
+                        p.type--fine-print
+                            | or 
+                            a(href="contact-us")
+                                | contact us

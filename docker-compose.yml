@@ -1,0 +1,16 @@
+version: "3.1"
+services:
+  web:
+    restart: always
+    build: ./express-docker/
+    ports:
+      - "8080:3000"
+    environment:
+      - NODE_ENV=production
+  ghost:
+    image: ghost:2.2.2-alpine
+    restart: always
+    ports:
+      - 2368:2368
+    volumes:
+      - "./ghost-docker:/var/lib/ghost/content"

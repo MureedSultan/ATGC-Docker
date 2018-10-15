@@ -1,0 +1,195 @@
+extends layout/main
+
+block content
+    section.text-center
+        .container
+            .row
+                .col-md-10
+                    h1 Partner with AT-GC
+                    p.lead
+                        | Learn how a partnership with us can benefit your practice and patients
+    section.imageblock.switchable.feature-large.bg--secondary
+        .imageblock__content.col-lg-4.col-md-3.pos-right
+            .background-image-holder
+                img(alt='image', src='img/custom/handshake.jpg')
+        .container
+            .row
+                .col-lg-7.col-md-8
+                    h2 Partner benefits
+                    p.lead
+                        | Organizations offering telegenetic services are viewed as cutting-edge to patients, leading to higher patient satisfaction, compliance, and retention among providers
+                    .feature-large__group
+                        .row
+                            .col-md-6
+                                .feature.feature-2
+                                    i.icon.icon-Link.color--primary
+                                    .feature__body
+                                        p
+                                            | Our genetic counseling services, provided by experts in the genetics field, are valuable to the complete medical and diagnostic practice.
+                            .col-md-6
+                                .feature.feature-2
+                                    i.icon.icon-Full-Screen.color--primary
+                                    .feature__body
+                                        p
+                                            | Providers can maintain control of patient care while broadening the scope of in-office services
+                            .col-md-6
+                                .feature.feature-2
+                                    i.icon.icon-Puzzle.color--primary
+                                    .feature__body
+                                        p
+                                            | Personalized explanations and recommendations related to patient care are sent directly to referring physicians, encouraging continuity of care and ongoing health management
+                            .col-md-6.mt-0
+                                .feature.feature-2
+                                    i.icon.icon-Doctor.color--primary
+                                    .feature__body
+                                        p
+                                            | Outsourcing genetic counseling services means that valuable physician time can be spent on other aspects of patient care
+    section
+        .container
+            .row.justify-content-center
+                .col-md-4
+                    .feature
+                        h4 Vast Expertise
+                        p.text-left
+                            | We specialize in all aspects of the genetic counseling process, including pre/post-test genetic counseling, genetic testing implementation, coordination, and interpretation of results. We serve as a liaison between providers and their patients, as well as serving as a link to the genetics laboratory.
+                    // end boxed
+                
+                .col-md-4
+                    .feature
+                        h4 Fully Flexible
+                        p.text-left
+                            | We offer contracts to institutions that desire to incorporate the application of genetic testing and counseling into the patient care they provide. Genetic counseling is provided in-office with a telemedicine approach or by phone or video chat in the comfort of the patient’s home.
+                    // end boxed
+                .col-md-4
+                    .feature
+                        h4 Board Certified
+                        p.text-left
+                            | All of our genetic counselors hold current board certification through the American Board of Genetic Counseling. Each counselor has undergone extensive training and education to help patients and their providers interpret genetic results and discuss genetic risk.
+                    // end boxed
+                .col-md-4
+                    .feature
+                        h4 Patient Empowerment
+                        p.text-left
+                            | We believe we are empowering every patient by helping guide their journey through the processes of genetic counseling and genetic testing. Our vision is to provide access to genetic counseling to patients across the country.
+                .col-md-4
+                    .feature
+                        h4 Convenient Access
+                        p.text-left
+                            | In areas without readily accessible genetic counselors, AT-GC offers a solution by connecting patients to qualified genetics professionals without extensive travel or scheduling concerns. We accept patients from anywhere in the United States.
+                .col-md-4
+                    .feature
+                        h4 Geniuine Care
+                        p.text-left
+                            | We pride ourselves on a real desire to positively impact the lives of our patients and their families. Allow the caring team at AT-GC help guide, educate, and fulfill your genetic counseling needs.
+    section.text-center.space--sm
+        .container
+            .row
+                .col-md-12
+                    h2 Clients
+    section
+        .container
+            .row
+                .col
+                    .slider.slider--inline-arrows.slider--arrows-hover.text-center(data-arrows='true')
+                        ul.slides
+                            if clients
+                                each client in clients
+                                    li.col-md-3.col-6
+                                        img.image--lg(alt='Image', src='img/clients/'+client)
+    section.text-center.space--sm.bg--secondary
+        .container
+            .row
+                .col-md-12
+                    h2 Benefits for your patients
+                    p.lead
+                        | Learn how we can increase your quality of care and patient satisfaction
+    section.text-center.space--xxs.bg--secondary
+        .container
+            .row
+                .col-md-4
+                    .feature
+                        i.icon.icon-MaleFemale.icon--lg.color--primary
+                        h4 Patient-centric Care
+                        p
+                            | Patient-centric appointments address the genetic as well as psychosocial implications for patients. Appointments are not time-limited, but instead, are concluded based on the patient’s satisfactory understanding.
+                .col-md-4
+                    .feature
+                        i.icon.icon-Books.icon--lg.color--primary
+                        h4 Education & Assistance
+                        p
+                            | Assistance with in-home or in-office test implementation information, personalized prevention and management information and, knowledge regarding the health effects of specific genetic changes come standard.
+                .col-md-4
+                    .feature
+                        i.icon.icon-Link.icon--lg.color--primary
+                        h4 Patient / Counselor Relation
+                        p
+                            | Patients have the ability to follow-up their counselor, familiar with their case and history is available. We help create a comfortable continuity of care for both patient and provider.
+                .col-md-4
+                    .feature
+                        i.icon.icon-Timer-2.icon--lg.color--primary
+                        h4 Low wait times
+                        p
+                            | Patients are contacted and scheduled within a two to three business days of referral.
+                .col-md-4
+                    .feature
+                        i.icon.icon-Globe-2.icon--lg.color--primary
+                        h4 Language Translation
+                        p
+                            | English and Spanish language services, with additional language translation services available upon request.
+                .col-md-4
+                    .feature
+                        i.icon.icon-Calendar.icon--lg.color--primary
+                        h4 Flexible Scheduling
+                        p
+                            | We work non-stop to provide your patients with the care and convenience they deserve. That is why we offer evening and weekend hours.
+    section.text-center.space--sm
+        .container
+            .row
+                .col-md-12
+                    h2 Professional Partnerships
+    section
+        .container
+            .row
+                .col
+                    .slider.slider--inline-arrows.slider--arrows-hover.text-center(data-arrows='true')
+                        ul.slides
+                            if partners
+                                each partner in partners
+                                    li.col-md-3.col-6
+                                        img.image--lg(alt='Image', src='img/partners/'+partner)
+    section.imageblock.switchable.feature-large.bg--secondary
+        .imageblock__content.col-lg-6.col-md-4.pos-right
+            .background-image-holder
+                img(alt='image', src='img/custom/kid.jpg')
+        .container
+            .row
+                .col-lg-5.col-md-7
+                    h2 Billing & Finances
+                    p
+                        | We are entirely committed to promoting positive relationships with our referring institutions and partner companies.
+                    p
+                        | At AT-GC, we realize that like our genomes, no two genetic companies or practices are the same.
+                    p
+                        | To discuss collaboration and customized partnership options and bring genetic counseling care to your patient population, please contact us. Institutional, self-pay, and insurance billing options (in select locations) are available.
+                    p
+                        | This means that whether you are seeking a genetic counseling referral source without monetary commitment, or whether you would like to arrange personalized, ongoing genetic counseling support for your patient groups at a competitive institutional rate, we can accommodate the specific needs of your institution.
+    section.text-center
+        .container
+            .row
+                .col-md-8.col-lg-6
+                    .cta
+                        h2 Still got questions?
+                        p.lead
+                            | We're here to help
+                        a.btn.btn--primary.type--uppercase(href='contact-us')
+                            span.btn__text
+                                | Contact Us
+                        p.type--fine-print
+                            | or check out 
+                            a(href="faq")
+                                | FAQs
+
+
+
+
+

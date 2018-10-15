@@ -1,0 +1,48 @@
+extends layout/main
+
+append head
+    script(src='js/custom.js') 
+
+block content
+    section.text-center
+        .container
+            .row.justify-content-center
+                //.col-md-12.col-12.mb-5
+                    .map-container.border--round(data-maps-api-key='AIzaSyD7AzKZpxKd4p2FaWb2Rpd3GN9qP3bFEZ0', data-address='1800 Marion St. Waycross, GA', data-marker-title='AT-GC', data-map-style='[{"featureType":"landscape","stylers":[{"hue":"#FFBB00"},{"saturation":43.400000000000006},{"lightness":37.599999999999994},{"gamma":1}]},{"featureType":"road.highway","stylers":[{"hue":"#FFC200"},{"saturation":-61.8},{"lightness":45.599999999999994},{"gamma":1}]},{"featureType":"road.arterial","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":51.19999999999999},{"gamma":1}]},{"featureType":"road.local","stylers":[{"hue":"#FF0300"},{"saturation":-100},{"lightness":52},{"gamma":1}]},{"featureType":"water","stylers":[{"hue":"#0078FF"},{"saturation":-13.200000000000003},{"lightness":2.4000000000000057},{"gamma":1}]},{"featureType":"poi","stylers":[{"hue":"#00FF6A"},{"saturation":-1.0989010989011234},{"lightness":11.200000000000017},{"gamma":1}]}]', data-map-zoom='15')
+                .col-md-8.col-lg-6.col-12
+                    h3
+                        | P.O. Box 111 
+                        br
+                        | Glenview, KY, 40025
+                    p.lead
+                        | E: 
+                        a(href='#') general@at-gc.com
+                        br
+                        |  P: +1 888-252-ATGC
+                    p.lead
+                        | Give us a call or email us, we endeavour to answer all enquiries within 24 hours on business days
+    section.text-center
+        .container
+            .row.justify-content-center.no-gutters
+                .col-md-8.col-lg-7
+                    form.text-left.form-email.row.mx-0(action="/contact-us", method="POST", data-success="Thanks for your enquiry, we'll be in touch shortly.", data-error='Please fill in all fields correctly.', data-recaptcha-sitekey='6LfYEwwTAAAAAOTDBHhHN5RNjpjQF2LW4rx4y_YL', data-recaptcha-theme='light')
+                        .col-md-12
+                            label Your Name:
+                            input.validate-required(type='text', name='name')
+                        .col-md-6
+                            label Email Address:
+                            input.validate-required.validate-email(type='email', name='email')
+                        .col-md-6
+                            label Phone Number:
+                            input.validate-required.validate-number-dash(type='number', name='phone')
+                        .col-md-12
+                            label Subject:
+                            input.validate-required(type='text', name='subject')
+                        .col-md-12
+                            label Message:
+                            textarea.validate-required(rows='6', name='Message')
+                        .col-md-5.col-lg-4
+                            button.btn.btn--primary.type--uppercase(type='submit') Send Enquiry
+            // end of row
+            // end of container
+

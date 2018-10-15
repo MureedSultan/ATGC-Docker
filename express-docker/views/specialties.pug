@@ -1,0 +1,123 @@
+extends layout/main
+
+block content
+    section.text-center
+        .container
+            .row
+                .col-md-10
+                    h1 Let’s Build Something
+                    p.lead
+                        | Explore the many ways AT-GC can support your practice
+    section.feature-large.switchable.bg--secondary
+        .container
+            .row.justify-content-between
+                .col-md-6.d-flex.align-items-center
+                    img.border--round.box-shadow-wide(alt='Image', src='img/custom/puzzle.jpg')
+                .col-lg-5.col-md-6
+                    h2 We support you
+                    p.lead
+                        | AT-GC partners with organizations that want to integrate cutting-edge genetics services into the care they provide to their patient population
+                    a(href="partner") Learn More »
+                    hr.short
+                    .text-block
+                        ul
+                            li Genetic Testing Laboratories
+                            li Health Plans and Insurers
+                            li Academic Institutions
+                            li Medical Providers and Practices
+                            li Hospitals and Health Systems
+                            li Individual Patients
+    section.text-center
+        .container
+            .row
+                .col-md-10.col-lg-8
+                    h2 Specialties Offered
+                    p.lead
+                        | AT-GC provides comprehensive counseling across the genetics spectrum from genetics professionals who are expertly trained in their respective fields and specialties
+    section
+        .container
+            ul.accordion.accordion-1.accordion--oneopen
+                li
+                    .accordion__title
+                        span.h5 Hereditary Cancers
+                    .accordion__content.container
+                            p
+                                | AT-GC offers a solution to meet the recommendations set forth by the Commission on Cancer and the NAPBC. We are capable of effectively counseling patients who may benefit from genetic assessment, and implementing the testing process for those patients who will be appropriate candidates for single- or multi-gene panels. Preventatively, we also encourage the counseling of family members who may have a significantly increased risk for certain cancers when a genetic mutation associated with one of the many hereditary cancer syndromes has been identified in the family. As genetic counselors specializing in oncology, we are expertly trained to provide comprehensive genetic counseling services for those cancer centers that do not have a licensed and certified genetic counselor on staff, as well as those wishing to scale their genetic counseling offerings for oncology.
+                            p
+                                | Genetic counseling access is a requirement for those centers accredited through the Commission on Cancer, which, in Standard 2.3, defines genetic counseling and risk assessment of cancer as “the processes to identify and counsel people at risk for familial or hereditary cancer syndromes. The purposes of genetic counseling are to educate patients about their likelihood to develop cancers, assist them in obtaining personal meaning from cancer genetic information, and empower them to make educated, informed decisions about genetic testing, cancer screening, and cancer prevention. Cancer risk assessment and genetic counseling involves pre-test and post-test counseling1.” It also states that these services should be “performed by a genetics professional with an educational background in cancer genetics and hereditary cancer syndromes and extensive experience in counseling, to provide accurate risk assessment and empathetic genetic counseling to patients with cancer and their families1.”
+                            p
+                                | With nearing 100 commonly tested genes associated with hereditary cancers and increased risk for malignancy, it is often difficult to stay abreast of the latest genetic information that may have implications for patients with cancer and their family members. The genetic counselors at AT-GC are experienced in providing empathetic and thorough patient care with expertise in ordering and interpreting cutting-edge genetic testing for hereditary cancer syndromes.
+                li
+                    .accordion__title
+                        span.h5 Reproductive Health and Fertility
+                    .accordion__content.container
+                        p
+                            | For couples struggling with infertility and pregnancy loss, it is advantageous for each partner to consider genetic testing. Our counselors are trained in psychosocial implications of reproductive risk and can provide information related to genetic testing and explain complex test results, including those indicative of chromosomal changes, autosomal dominant, recessive, and X-linked genetic disorders. Genetic counselors may discuss carrier screening and review reproductive options including preimplantation genetic diagnosis (PGD) for aneuploidy or single-gene disorders and ART options in a sensitive manner.
+                li
+                    .accordion__title
+                        span.h5 Preconception and Prenatal genetics
+                    .accordion__content.container
+                        p
+                            | We offer comprehensive preconception and prenatal genetic counseling services for patients with genetic conditions in the family, those seeking preconception or prenatal screening and diagnostic tests, high-risk pregnancies in which genetic counseling is recommended, couples who have difficulty conceiving or patients with difficulty maintaining a pregnancy, those whose ultrasound is suspicious for a potential genetic condition, patients undergoing invasive diagnostic procedures, as well as those who may have general questions regarding how genetics can impact their children. Additional reasons for a genetics referral may include pregnancies with known or suspected genetic conditions present in the fetus, a history of genetic disorder, birth defect, or developmental delay in either parent or their extended family, previous genetic carrier screening indicating that the fetus is at risk to have inherited a genetic disorder, or a background leading to a higher risk of certain genetic conditions such as cystic fibrosis, sickle cell anemia, or Tay-Sachs and other genetic conditions.
+                li
+                    .accordion__title
+                        span.h5 Carrier Screening and Newborn Screening
+                    .accordion__content.container
+                        p
+                            | Genetic counseling is available as follow-up to abnormal newborn screening results, focusing on parent carrier risk and subsequent carrier testing in the parents. Medical management guidelines related to the specific genetic change are reviewed, with current management guidelines and recommendations shared with the patients and referring physicians. Genetic counseling related to population-based carrier screening for single gene disorders is also available.
+                li
+                    .accordion__title
+                        span.h5 Exome Testing
+                    .accordion__content.container
+                        p
+                            | Whole exome sequencing is an extensive genetic test that looks at a great number of genes in the body at one time. At times, exome testing can offer a genetic diagnosis and explanation for an individual’s symptoms. Genetic counselors are trained to provide up-to-date information related to complex exome results. They also help patients and providers navigate and interpret results and explain any unanticipated secondary findings, as well as discuss and coordinate genetic counseling and testing for other family members.
+                li
+                    .accordion__title
+                        span.h5 Pediatric Genetics
+                    .accordion__content.container
+                        p
+                            | For pediatric patients under the care of a geneticist or other qualified expert, AT-GC can provide results interpretation for genetic tests, explaining the natural history and general management guidelines dependent upon the specific genetic results in relatable and understandable terms, as recommended by the American College of Medical Genetics (link acmg.net) and American Society of Human Genetics (link ashg.org).
+                li
+                    .accordion__title
+                        span.h5 Cardiovascular Genetics
+                    .accordion__content.container
+                        p
+                            | National guidelines recommend that patients be referred for genetic counseling when a cardiac diagnosis with a genetic component is known or suspected in the family 2,3, such as those with familial cardiomyopathies, inherited arrhythmias and channelopathies, and other genetic conditions affecting the heart, including those related to connective tissue disorders.
+                        p
+                            | Patients should also be referred when there is a personal or family history of multiple family members with the same type of heart disease, coronary artery disease in multiple family members, congenital heart disease, familial thoracic aneurysms, sudden cardiac death or unexplained death in young patients.
+                        p
+                            | The determination of these guidelines highlights the importance of identification and appropriate genetics referral and evaluation for a range of cardiac conditions. Due to the potential important implications of genetic testing, certain health plan policies require pre- and post-test genetic counseling by a trained genetics professional as a condition for genetic testing coverage. AT-GC offers cardiac genetic counseling for patients nationwide that may otherwise lack access to genetic counselors.
+                        p
+                            | 2. HRS/EHRA expert consensus statement on the state of genetic testing for the channelopathies and cardiomyopathies. Heart Rhythm 2011; 8:1308–1339.
+                        p
+                            | 3. Genetics and Cardiovascular Disease. A Policy Statement From the American Heart Association. Circulation 2012;126:142–157.
+                li
+                    .accordion__title
+                        span.h5 Neurogenetics
+                    .accordion__content.container
+                        p
+                            | Counseling is available for patients with a family history of neurologic disease. Genetic testing can elucidate reasons for genetic neurologic conditions, such as those related to trinucleotide repeats, and genetic counselors can help interpret these results, explaining complex topics such as unstable repeats and expansion and their relation to neurodegenerative disease. AT-GC genetic counselors are available to discuss conditions ranging from Alzheimer’s disease, to neuromuscular disorders such as ALS, movement disorders including Parkinsonism and Huntington’s chorea, muscular dystrophies, and other known or suspected neurogenetic disease.
+                li
+                    .accordion__title
+                        span.h5 Hematology Genetics
+                    .accordion__content.container
+                        p
+                            | Patients referred for indications related to hematology may have a history of thrombophilias, hemoglobinopathies, or a variety of bleeding disorders. Common indications include hemophilias, sickle cell disease, and Factor V Leiden and prothrombin testing. Genetic counseling can assist providers in explaining disease history and management and explain specific genetic testing results and impact on other family members, as recommended by the National Institute of Health (link nih.gov) and American College of Medical Genetics (link acmg.net) .
+                li
+                    .accordion__title
+                        span.h5 Metabolic Genetics
+                    .accordion__content.container
+                        p
+                            | Genetic counseling is available for specific concerns related to the hundreds of inborn errors of metabolism. Genetic counselors are trained to interpret specific results related to these single-gene disorders, including glycogen storage disorders, urea cycle disorders, mitochondrial disorders, lysosomal storage disorders, peroxisomal disorders, and organic acid and amino acid metabolism disorders, among others.
+                li
+                    .accordion__title
+                        span.h5 Pharmacogenetics and Medication Management
+                    .accordion__content.container
+                        p
+                            | As knowledge increases regarding the impact of a person’s genetics to their response to medication, pharmacogenetic tests are becoming commonplace and help physicians decide on appropriate and responsive courses of treatment for individual patients. Genetic counseling is available issues related to pharmacogenetic response and medication management.
+                li
+                    .accordion__title
+                        span.h5 DTC Result Interpretation and General Health and Wellness Genetics
+                    .accordion__content.container
+                        p
+                            | AT-GC provides counseling to patients who want to know more about their specific genetic risks in relation to their own health or how this relates to their children or other family members.
