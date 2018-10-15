@@ -4,9 +4,13 @@ services:
     restart: always
     build: ./express-docker/
     ports:
-      - "8080:3000"
+      - 8080:3000
     environment:
       - NODE_ENV=production
+      #- VIRTUAL_HOST=atgc.mureedsultan.com,www.atgc.mureedsultan.com
+      - VIRTUAL_HOST=atgc.localhost,www.atgc.localhost,atgc.mureedsultan.com,www.atgc.mureedsultan.com
+      - VIRTUAL_PORT=8080
+
   ghost:
     image: ghost:2.2.2-alpine
     restart: always
@@ -14,3 +18,14 @@ services:
       - 2368:2368
     volumes:
       - "./ghost-docker:/var/lib/ghost/content"
+    environment:
+      #- VIRTUAL_HOST=manage.mureedsultan.com,www.manage.mureedsultan.com
+      - VIRTUAL_HOST=manage.localhost,www.manage.localhost,manage.mureedsultan.com,www.manage.mureedsultan.com
+      - VIRTUAL_PORT=8081
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
