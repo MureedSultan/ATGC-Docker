@@ -81,7 +81,10 @@ block content
 										.article__body
 											if post.feature_image
 												a(href='news/'+post.slug)
-													img(alt='Image', src=post.feature_image)
+													img(
+														alt='Image', 
+														src=post.feature_image.replace('content', 'img').replace('images', 'news')
+													)
 											p!= post.html.substring(0,299).trim()+'...'
 											a(href='news/'+'news/'+post.slug) Continue reading »
 

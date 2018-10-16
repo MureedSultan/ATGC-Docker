@@ -1,25 +1,33 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios');
+const chalk = require('chalk');
+const log = console.log;
 
-let api;
+const white = chalk.whiteBright.bold;
+const red = chalk.redBright.bold;
+const green = chalk.greenBright.bold;
+const cyan = chalk.cyanBright.bold;
+
+const client_id = 'ghost-frontend';
+const client_secret = 'fff48a18b688';
+
 if (process.env.NODE_ENV == "production") {
     api = 'http://ghost:2368/ghost/api/v0.1/posts/';
-    console.log('Env: production');
+    log(white('\nEnvironment: Production\n'));
 } else if (process.env.NODE_ENV == "development") {
-    api = 'http://localhost:2368/ghost/api/v0.1/posts/';
-    console.log('Env: development');
+    api = 'http://localhost:8081/ghost/api/v0.1/posts/';
+    log(white('\nEnvironment: Development\n'));
 } else {
-    console.log('Please set NODE_ENV');
+    log(red('\nPlease set NODE_ENV\n'));
 }
 
 router.get('/', function(req, res, next) {
-    console.log('========== NEWS ==========');
+    log(cyan('\n========== NEWS ==========\n'));
     axios.get(api, {
             params: {
-                absolute_urls: true,
-                client_id: 'ghost-frontend',
-                client_secret: 'fff48a18b688'
+                client_id,
+                client_secret
             }
         })
         .then(function(response) {
@@ -27,25 +35,45 @@ router.get('/', function(req, res, next) {
                 title: 'News',
                 posts: response.data.posts
             });
+            log(green(`\nSuccess: ${api}\n`));
         })
         .catch(function(error) {
-            res.render('error');
-            console.log(error);
+            let err;
+            if (typeof error.response == "undefined") {
+                err = {
+                    status: '500',
+                    statusText: "API can't be reached",
+                    stack: error
+                }
+            } else {
+                err = {
+                    status: error.response.status,
+                    message: error.response.statusText,
+                    stack: 'Axios ' + error
+                }
+            }
+            res.render('error', {
+                title: 'Error',
+                error: {
+                    status: err.status,
+                    message: err.statusText,
+                    stack: err.stack
+                }
+            });
+            //log(error);
+            log(red(`\nError: ${api}\n`));
         });
-    console.log('========== END NEWS ==========');
 });
 
 router.get('/:article', function(req, res, next) {
-    console.log('========== ARTICLE ==========');
+    log(cyan('\n========== ARTICLE =========='));
     const article = req.params.article;
     let url = api + 'slug/' + article;
-    //res.send('test');
     //*
     axios.get(url, {
             params: {
-                absolute_urls: true,
-                client_id: 'ghost-frontend',
-                client_secret: 'fff48a18b688'
+                client_id,
+                client_secret
             }
         })
         .then(function(response) {
@@ -53,14 +81,21 @@ router.get('/:article', function(req, res, next) {
                 title: 'News',
                 posts: response.data.posts
             });
-            console.log(response.data.posts[0].html);
+            log(green(`\nSuccess: ${article}\n`));
         })
         .catch(function(error) {
-            res.render('error');
-            //console.log(error);
+            res.render('error', {
+                title: 'Error',
+                error: {
+                    status: error.response.status,
+                    message: error.response.statusText,
+                    stack: 'Axios ' + error
+                }
+            });
+            //log(error);
+            log(red(`\nError: ${article}\n`));
         });
     //*/
-    console.log('========== END ARTICLE ==========');
 });
 
 module.exports = router;

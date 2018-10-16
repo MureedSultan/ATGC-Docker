@@ -1,8 +1,16 @@
 extends layout/main
 
+prepend nav
+	- var absolute = true;
+
 block content
-	h1= message
-	if error.status
-		h2= error.status
-	if error.stack
-		pre #{error.stack}
+	section.height-100.bg--dark.text-center
+		.container.pos-vertical-center
+			.row
+			.col-md-12
+				h1.h1--large= error.status
+				h2= error.message
+				p.lead= error.stack
+				a(href='/') Go back to home page
+			// end of row
+			// end of container

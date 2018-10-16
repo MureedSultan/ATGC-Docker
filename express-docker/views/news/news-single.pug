@@ -14,7 +14,7 @@ block content
             article
                 .imagebg.text-center.height-60(data-overlay='5')
                     .background-image-holder
-                        img(alt='background', src=post.feature_image)
+                        img(alt='background', src=post.feature_image.replace('content', 'img').replace('images', 'news'))
                     .container.pos-vertical-center
                         .row
                             .col-md-12

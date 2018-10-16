@@ -1,20 +1,25 @@
 version: "3"
 services:
   web:
+    container_name: web
     restart: always
     build: ./express-docker/
     ports:
       - 8080:3000
+    volumes:
+      - ./ghost-docker/images:/usr/src/app/public/img/news
     environment:
       - NODE_ENV=production
+    links:
+      - ghost
       
   ghost:
+    container_name: ghost
     image: ghost:2.2.2-alpine
     restart: always
     ports:
       - 8081:2368
     volumes:
-      - "./ghost-docker:/var/lib/ghost/content"
+      - ./ghost-docker:/var/lib/ghost/content
     environment:
       - NODE_ENV=production
-      - url=http://manage.mureedsultan.com/
