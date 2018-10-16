@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3"
 services:
   web:
     restart: always
@@ -7,25 +7,56 @@ services:
       - 8080:3000
     environment:
       - NODE_ENV=production
-      #- VIRTUAL_HOST=atgc.mureedsultan.com,www.atgc.mureedsultan.com
-      - VIRTUAL_HOST=atgc.localhost,www.atgc.localhost,atgc.mureedsultan.com,www.atgc.mureedsultan.com
+      - VIRTUAL_HOST=atgc.mureedsultan.com,www.atgc.mureedsultan.com
       - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=atgc.mureedsultan.com,www.atgc.mureedsultan.com
+      - LETSENCRYPT_EMAIL=sultan.0313@gmail.com
 
   ghost:
     image: ghost:2.2.2-alpine
     restart: always
     ports:
-      - 2368:2368
+      - 8081:2368
     volumes:
       - "./ghost-docker:/var/lib/ghost/content"
     environment:
-      #- VIRTUAL_HOST=manage.mureedsultan.com,www.manage.mureedsultan.com
-      - VIRTUAL_HOST=manage.localhost,www.manage.localhost,manage.mureedsultan.com,www.manage.mureedsultan.com
+      - NODE_ENV=production
+      - url=http://admin.mureedsultan.com/
+      - VIRTUAL_HOST=admin.mureedsultan.com,www.admin.mureedsultan.com
       - VIRTUAL_PORT=8081
-
+      - LETSENCRYPT_HOST=admin.mureedsultan.com,www.admin.mureedsultan.com
+      - LETSENCRYPT_EMAIL=sultan.0313@gmail.com
+      
   nginx-proxy:
     image: jwilder/nginx-proxy
+    container_name: nginx-proxy
     ports:
-      - "80:80"
+      - 80:80
     volumes:
-      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - 'nginx-certs:/etc/nginx/certs:ro'
+      - 'nginx-vhosts:/etc/nginx/vhost.d'
+      - 'nginx-webroot:/usr/share/nginx/html'
+      - '/var/run/docker.sock:/tmp/docker.sock:ro'
+    labels:
+      - 'com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy=true'
+  
+  letsencrypt:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    environment:
+      NGINX_DOCKER_GEN_CONTAINER: nginx-docker-gen
+    volumes:
+      - 'nginx-certs:/etc/nginx/certs:rw'
+      - 'nginx-vhosts:/etc/nginx/vhost.d'
+      - 'nginx-webroot:/usr/share/nginx/html'
+      - '/var/run/docker.sock:/var/run/docker.sock:ro'
+
+volumes:
+  nginx-config:
+  nginx-certs:
+  nginx-vhosts:
+  nginx-webroot:
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
