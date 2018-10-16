@@ -16,7 +16,7 @@ if (process.env.NODE_ENV == "production") {
     api = 'http://ghost:2368/ghost/api/v0.1/posts/';
     log(white('\nEnvironment: Production\n'));
 } else if (process.env.NODE_ENV == "development") {
-    api = 'http://localhost:8081/ghost/api/v0.1/posts/';
+    api = 'http://localhost:2368/ghost/api/v0.1/posts/';
     log(white('\nEnvironment: Development\n'));
 } else {
     log(red('\nPlease set NODE_ENV\n'));

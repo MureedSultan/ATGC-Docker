@@ -18,7 +18,7 @@ services:
     image: ghost:2.2.2-alpine
     restart: always
     ports:
-      - 8081:2368
+      - 2368:2368
     volumes:
       - ./ghost-docker:/var/lib/ghost/content
     environment:
