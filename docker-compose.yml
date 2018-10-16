@@ -21,5 +21,5 @@ services:
       - 2368:2368
     volumes:
       - ./ghost-docker:/var/lib/ghost/content
-    environment:
-      - NODE_ENV=production
+    env_file:
+     - ./ghost.env
