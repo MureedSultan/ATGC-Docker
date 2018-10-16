@@ -1,4 +1,4 @@
-version: "3.1"
+version: "3"
 services:
   web:
     restart: always
@@ -7,7 +7,7 @@ services:
       - 8080:3000
     environment:
       - NODE_ENV=production
-
+      
   ghost:
     image: ghost:2.2.2-alpine
     restart: always
