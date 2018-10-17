@@ -5,6 +5,8 @@ prepend nav
 
 append footer
     //script(src='js/granim.min.js')
+    script(src='https://widget-cdn.simplepractice.com/assets/integration-1.0.js')
+
 
 block content
     section.cover.space--lg.height-80.imagebg(data-scrim-bottom='10', data-scrim-top='5')
@@ -18,7 +20,14 @@ block content
                         p.lead
                             | We provide access to genetic counseling and testing services across North America, via telemedicine. 
                             | The world of genetic understanding is growing. Let’s navigate it together.
-                        a.btn.btn--primary.type--uppercase(href='#')
+                        a.btn.btn--primary.type--uppercase(
+                            href='https://at-gc.clientsecure.me', 
+                            data-spwidget-scope-id='7a43556f-5f79-4337-b87a-81e4dc0fc3d8', 
+                            data-spwidget-scope-uri='at-gc', 
+                            data-spwidget-application-id='7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b', 
+                            data-spwidget-scope-global='', 
+                            data-spwidget-autobind=''
+                        )
                             span.btn__text
                                 | Request An Appointment
     section.switchable.feature-large
