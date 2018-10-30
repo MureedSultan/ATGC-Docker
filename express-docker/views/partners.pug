@@ -7,17 +7,17 @@ block content
                 .col-md-10
                     h1 Partner with AT-GC
                     p.lead
-                        | Learn how a partnership with us can benefit your practice and patients
+                        | Learn how a partnership with us can benefit your practice and patients.
     section.imageblock.switchable.feature-large.bg--secondary
         .imageblock__content.col-lg-4.col-md-3.pos-right
             .background-image-holder
-                img(alt='image', src='img/custom/handshake.jpg')
+                img(alt='image', src='img/custom/partners.jpg')
         .container
             .row
                 .col-lg-7.col-md-8
-                    h2 Partner benefits
+                    h2 Partner Benefits
                     p.lead
-                        | Organizations offering telegenetic services are viewed as cutting-edge to patients, leading to higher patient satisfaction, compliance, and retention among providers
+                        | Organizations offering telegenetic services are viewed as cutting-edge to patients, leading to higher patient satisfaction, compliance, and retention among providers.
                     .feature-large__group
                         .row
                             .col-md-6
@@ -25,25 +25,26 @@ block content
                                     i.icon.icon-Link.color--primary
                                     .feature__body
                                         p
-                                            | Our genetic counseling services, provided by experts in the genetics field, are valuable to the complete medical and diagnostic practice.
-                            .col-md-6
-                                .feature.feature-2
-                                    i.icon.icon-Full-Screen.color--primary
-                                    .feature__body
-                                        p
-                                            | Providers can maintain control of patient care while broadening the scope of in-office services
-                            .col-md-6
-                                .feature.feature-2
-                                    i.icon.icon-Puzzle.color--primary
-                                    .feature__body
-                                        p
-                                            | Personalized explanations and recommendations related to patient care are sent directly to referring physicians, encouraging continuity of care and ongoing health management
+                                            | With scheduling for genetic counseling services available within 1-2 days of patient referral, AT-GC offers rapid turnaround for expedited patient care.
                             .col-md-6.mt-0
                                 .feature.feature-2
                                     i.icon.icon-Doctor.color--primary
                                     .feature__body
                                         p
-                                            | Outsourcing genetic counseling services means that valuable physician time can be spent on other aspects of patient care
+                                            | Outsourcing genetic counseling services means that valuable physician time can be spent on other aspects of patient care.
+                            .col-md-6
+                                .feature.feature-2
+                                    i.icon.icon-Puzzle.color--primary
+                                    .feature__body
+                                        p
+                                            | Personalized explanations and recommendations related to patient care are sent directly to referring physicians, encouraging continuity of care and ongoing health management.
+                            .col-md-6
+                                .feature.feature-2
+                                    i.icon.icon-Full-Screen.color--primary
+                                    .feature__body
+                                        p
+                                            | AT-GC provides a valuable addition to help complete your scope of service offerings while providing collaboration with a team of genetics experts through processes, technology, and workflow customized to meet your needs.
+                            
     section
         .container
             .row.justify-content-center
@@ -70,12 +71,12 @@ block content
                     .feature
                         h4 Patient Empowerment
                         p.text-left
-                            | We believe we are empowering every patient by helping guide their journey through the processes of genetic counseling and genetic testing. Our vision is to provide access to genetic counseling to patients across the country.
+                            | We believe we are empowering every patient by helping guide their journey through the processes of genetic counseling and genetic testing. Our vision is to bring increased access of quality genetic counseling services to patients across the globe.
                 .col-md-4
                     .feature
                         h4 Convenient Access
                         p.text-left
-                            | In areas without readily accessible genetic counselors, AT-GC offers a solution by connecting patients to qualified genetics professionals without extensive travel or scheduling concerns. We accept patients from anywhere in the United States.
+                            | In areas without readily accessible genetic counselors, AT-GC offers a solution by connecting patients to qualified genetics professionals without extensive travel or scheduling concerns. We accept patients from anywhere within the United States and in many international locations.
                 .col-md-4
                     .feature
                         h4 Geniuine Care
@@ -95,7 +96,7 @@ block content
                             if clients
                                 each client in clients
                                     li.col-md-3.col-6
-                                        img.image--lg(alt='Image', src='img/clients/'+client)
+                                        img(alt='Image', src='img/clients/'+client)
     section.text-center.space--sm.bg--secondary
         .container
             .row
@@ -127,9 +128,9 @@ block content
                 .col-md-4
                     .feature
                         i.icon.icon-Timer-2.icon--lg.color--primary
-                        h4 Low wait times
+                        h4 Low Wait Times
                         p
-                            | Patients are contacted and scheduled within a two to three business days of referral.
+                            | With many clinics experiencing patient backlog of 3-4 months, AT-GC removes this burden by our availability to see patients as soon as 1-2 days after referral, if needed.
                 .col-md-4
                     .feature
                         i.icon.icon-Globe-2.icon--lg.color--primary
@@ -173,21 +174,7 @@ block content
                         | To discuss collaboration and customized partnership options and bring genetic counseling care to your patient population, please contact us. Institutional, self-pay, and insurance billing options (in select locations) are available.
                     p
                         | This means that whether you are seeking a genetic counseling referral source without monetary commitment, or whether you would like to arrange personalized, ongoing genetic counseling support for your patient groups at a competitive institutional rate, we can accommodate the specific needs of your institution.
-    section.text-center
-        .container
-            .row
-                .col-md-8.col-lg-6
-                    .cta
-                        h2 Still got questions?
-                        p.lead
-                            | We're here to help
-                        a.btn.btn--primary.type--uppercase(href='contact-us')
-                            span.btn__text
-                                | Contact Us
-                        p.type--fine-print
-                            | or check out 
-                            a(href="faq")
-                                | FAQs
+    include include/cta
 
 
 
