@@ -1,1 +1,1 @@
-function loadStyleSheet(e){document.createStyleSheet?document.createStyleSheet(e):$("head").append($("<link rel='stylesheet' href='"+e+"' type='text/css' media='screen' />"))}$(document).ready(function(){loadStyleSheet("https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i")});
+!function(e){var t=e.createElement("link"),n=e.getElementsByTagName("script")[0];t.rel="stylesheet",t.href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700|Merriweather:300,300i",n.parentNode.insertBefore(t,n)}(document);

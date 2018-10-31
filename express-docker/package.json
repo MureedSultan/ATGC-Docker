@@ -26,6 +26,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-purgecss": "^1.1.1",
     "gulp-uglify": "^3.0.1",
+    "imagemin-mozjpeg": "^8.0.0",
     "imagemin-pngquant": "^6.0.0"
   }
 }
