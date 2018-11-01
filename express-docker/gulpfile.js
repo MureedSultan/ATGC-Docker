@@ -25,7 +25,7 @@ gulp.task('images', () => {
 		},
 		{
 			folder: 'custom',
-			width: 700,
+			width: 900,
 			crop: false
 		},
 		{
@@ -62,7 +62,7 @@ gulp.task('images', () => {
 						interlaced: true
 					}),
 					imageminMozjpeg({
-						quality: 75
+						quality: 80
 					}),
 					imagemin.optipng({
 						optimizationLevel: 5

@@ -28,7 +28,7 @@ router.get('/patients', function(req, res, next) {
 	});
 });
 
-router.get('/partner', function(req, res, next) {
+router.get('/partners', function(req, res, next) {
 	let partnersFilter = [];
 	let clientsFilter = [];
 	const partners = fs.readdirSync('./public/dist/img/partners/');
