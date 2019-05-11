@@ -1,5 +1,6 @@
 @font-face {
 	font-family: 'iconsmind';
+	font-display: auto;
 	src:url('../fonts/iconsmind.eot?#iefix-rdmvgc') format('embedded-opentype');
 	src:url('../fonts/iconsmind.woff') format('woff'),
 		url('../fonts/iconsmind.ttf') format('truetype');

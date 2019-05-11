@@ -64,3 +64,6 @@ typings/
 .DS_Store
 *.DS_Store
 *.env
+
+# certs
+proxy/certbot/conf

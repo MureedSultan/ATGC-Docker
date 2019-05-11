@@ -2,6 +2,7 @@ version: "3"
 services:
   web:
     container_name: web
+    hostname: web
     restart: always
     build: ./express-docker/
     ports:
@@ -15,6 +16,7 @@ services:
       
   ghost:
     container_name: ghost
+    hostname: ghost
     image: ghost:2.2.2-alpine
     restart: always
     ports:
@@ -23,3 +25,25 @@ services:
       - ./ghost-docker:/var/lib/ghost/content
     env_file:
      - ./ghost.env
+
+  nginx:
+    container_name: nginx
+    image: nginx:1.15-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    volumes:
+      - ./proxy/nginx:/etc/nginx/conf.d
+      - ./proxy/certbot/conf:/etc/letsencrypt
+      - ./proxy/certbot/www:/var/www/certbot
+    links:
+      - web
+
+  certbot:
+    container_name: certbot
+    image: certbot/certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+    volumes:
+      - ./proxy/certbot/conf:/etc/letsencrypt
+      - ./proxy/certbot/www:/var/www/certbot

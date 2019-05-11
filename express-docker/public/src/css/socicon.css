@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'Socicon';
+  font-display: auto;
   src:  url('../fonts/socicon.eot?a93r5t');
   src:  url('../fonts/socicon.eot?a93r5t#iefix') format('embedded-opentype'),
     url('../fonts/socicon.ttf?a93r5t') format('truetype'),

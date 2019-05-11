@@ -1,5 +1,6 @@
 @font-face {
   font-family: 'stack-interface';
+  font-display: auto;
   src: url('../fonts/stack-interface.eot?33839631');
   src: url('../fonts/stack-interface.eot?33839631#iefix') format('embedded-opentype'),
        url('../fonts/stack-interface.woff2?33839631') format('woff2'),
