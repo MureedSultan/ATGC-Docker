@@ -14,7 +14,7 @@ kind: Deployment
 metadata:
   name: frontend
 spec:
-  replicas: 2
+  replicas: 6
   selector:
     matchLabels:
       app: frontend
@@ -25,10 +25,13 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: gitlab.mureedsultan.com:4567/sultan/atgc/frontend
+          image: gitlab.mureedsultan.com:4567/sultan/atgc/frontend:latest
+          imagePullPolicy: Always
           env:
             - name: NODE_ENV
               value: production
+            - name: NEWS_URL
+              value: https://news.advancedtelegeneticcounseling.com
           ports:
             - containerPort: 3000
       imagePullSecrets:

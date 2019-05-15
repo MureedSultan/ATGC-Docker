@@ -10,6 +10,8 @@ spec:
     - hosts:
         - atgc.sltn.dev
         - news.sltn.dev
+        - advancedtelegeneticcounseling.com
+        - news.advancedtelegeneticcounseling.com
       secretName: letsencrypt-prod
   rules:
     - host: atgc.sltn.dev
@@ -19,6 +21,18 @@ spec:
               serviceName: frontend
               servicePort: 80
     - host: news.sltn.dev
+      http:
+        paths:
+          - backend:
+              serviceName: ghost
+              servicePort: 80
+    - host: advancedtelegeneticcounseling.com
+      http:
+        paths:
+          - backend:
+              serviceName: frontend
+              servicePort: 80
+    - host: news.advancedtelegeneticcounseling.com
       http:
         paths:
           - backend:

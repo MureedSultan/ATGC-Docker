@@ -4,11 +4,11 @@ services:
     container_name: web
     hostname: web
     restart: always
-    build: ./express-docker/
+    build: ./frontend/
     ports:
       - 8080:3000
     volumes:
-      - ./ghost-docker/images:/usr/src/app/public/img/news
+      - ./news/images:/usr/src/app/public/img/news
     environment:
       - NODE_ENV=production
       - NEWS_URL=http://localhost:2368/
@@ -23,7 +23,7 @@ services:
     ports:
       - 2368:2368
     volumes:
-      - ./ghost-docker:/var/lib/ghost/content
+      - ./news:/var/lib/ghost/content
     environment:
       - NODE_ENV=production
       - url=http://localhost:2368/

@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "NODE_ENV=development NEWS_URL=http://localhost:2368/ nodemon ./bin/www"
+    "dev": "NODE_ENV=development NEWS_URL=http://localhost:2368/ nodemon ./bin/www",
+    "build": "gulp default"
   },
   "dependencies": {
     "axios": "^0.18.0",

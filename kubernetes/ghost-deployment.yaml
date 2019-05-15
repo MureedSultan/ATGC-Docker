@@ -30,7 +30,7 @@ spec:
           image: ghost:2.22.0-alpine
           env:
             - name: url
-              value: https://news.sltn.dev
+              value: https://news.advancedtelegeneticcounseling.com
           ports:
             - containerPort: 2368
           volumeMounts:
